@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: taixiu-ai-api
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 3001
+      - key: NODE_VERSION
+        value: 18.0.0

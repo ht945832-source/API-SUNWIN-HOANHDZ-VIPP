@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: taixiu-prediction-api
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js  # ← Đảm bảo là server.js
+    healthCheckPath: /
+    autoDeploy: true
+    region: singapore
+    envVars:
+      - key: NODE_VERSION
+        value: 18.17.0
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3001
